@@ -89,11 +89,9 @@ class Square {
         this.velocityX = -this.velocityX;
 
       }
-
       if (this.y >= canvasHeight - this.squareHeight || this.y <= this.squareHeight - this.squareHeight) {
         this.velocityY = -this.velocityY;
       }
-
 
       for (let i = 0; i < figure.length; i++) {
         if (Math.abs(this.x - figure[i].x) + Math.abs(this.y - figure[i].y) <= this.squareWidth) {
@@ -186,7 +184,7 @@ function animation() {
       setInterval(() => {
         figure[i].draw();
         figure[i].update();
-      }, 0.2);
+      }, 2);
       console.log("Площадь:", figure[i].area.toFixed(2), "Цвет:", figure[i].color, "Тип фигуры:", figure[i].displayName, "Порядковый номер:", count++)
     }, timeOut += 5000);
 
